@@ -1,7 +1,7 @@
 import express from "express";
 
 import db from "./config/Database.js";
-import UserRoute from "./routes/UserRoute.js";
+import UserRoute from "./routes/orderRoute.js";
 
 const app = express();
 const PORT = 4500;
