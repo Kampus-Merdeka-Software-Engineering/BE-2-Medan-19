@@ -7,7 +7,7 @@ import menuRoute from './routes/menuRoute.js';
 import cors from "cors";
 
 const app = express();
-const PORT = 4500;
+const PORT = 3000;
 
 app.use(cors());
 app.use(express.json()); // For reading data on body in JSON format
@@ -22,7 +22,7 @@ db.sync({ alter: true })
   .then(() => {
     console.log(`Database connected`);
 
-    app.listen(PORT, () => {
+    app.listen(PORT, "0.0.0.0", () => {
       console.log(`Server running on port ${PORT}`);
     });
   })
