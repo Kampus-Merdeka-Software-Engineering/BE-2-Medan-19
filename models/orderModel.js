@@ -4,7 +4,7 @@ import db from "../config/Database.js";
 
 const {DataTypes} = Sequelize;
 
-const Order = db.define("order", {
+const order = db.define("order", {
   order_id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -19,6 +19,9 @@ const Order = db.define("order", {
   address: {
     type: DataTypes.STRING,
   },
+  ordered_menu: {
+    type: DataTypes.JSON
+  }
 });
 
-export default Order;
+export default order;

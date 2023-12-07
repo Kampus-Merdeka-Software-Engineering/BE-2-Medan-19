@@ -11,11 +11,11 @@ const menu = db.define('menu', {
     },
     name:{
         type: DataTypes.STRING,
-        allowNull:false,
+        allowNull:true,
     },
     price:{
         type: DataTypes.FLOAT,
-        allowNull: false,
+        allowNull: true,
     }
 });
 
