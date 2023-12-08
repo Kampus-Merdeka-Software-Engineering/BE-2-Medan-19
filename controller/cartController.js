@@ -1,3 +1,4 @@
+import { where } from "sequelize";
 import cart from "../models/cartModel.js";
 import menu from "../models/menuModel.js";
 
@@ -57,6 +58,14 @@ export const getCart = async(req,res) =>{
   try{
     const cartList = await cart.findAll();
     res.status(200).json(cartList);
+  }catch (err){
+    req.status(400).json(err);
+  }
+}
+
+export const deleteCart = async(req,res) => {
+  try{
+    await cart.destroy({where: {}})
   }catch (err){
     req.status(400).json(err);
   }
